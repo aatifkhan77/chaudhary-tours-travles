@@ -1,0 +1,167 @@
+<?php
+// Include database connection
+include('conn.php');
+
+// Initialize an empty variable for car items HTML
+$car_items_html = '';
+
+// Fetch car data from the database
+$sql = "SELECT * FROM vehcile";
+$result = $conn->query($sql);
+
+// Check if there are any cars
+if ($result->num_rows > 0) {
+    // Loop through each car and generate HTML
+    while ($row = $result->fetch_assoc()) {
+        $car_items_html .= "
+        <div class='col-lg-6'>
+          <div class='car-item car-item--style2'>
+          <div class='thumb bg_img' style='background-image: url({$row['vehicle_image']})'></div>
+            <div class='car-item-body'>
+              <div class='content'>
+                <h4 class='title'>{$row['vehicle_name']}</h4>
+                <span class='price'>Start from {$row['vehcile_rate']} per KM</span>
+                <p>{$row['vehicle_description']}</p>
+                <a href='#0' class='cmn-btn'>Rent Car</a>
+              </div>
+              <div class='car-item-meta'>
+                <ul class='details-list'>
+                  <li><i class='fa fa-car'></i>Model {$row['vehicle_model']}</li>
+                  <li><i class='fa fa-tachometer'></i>Transmission: {$row['vehicle_transmission']}</li>
+                </ul>
+              </div>
+            </div>
+          </div><!-- car-item end -->
+        </div><!-- car-item end -->";
+    }
+} else {
+    // If there are no cars
+    $car_items_html = "<p>No cars found</p>";
+}
+
+// Close database connection
+$conn->close();
+?>
+ 
+
+
+ div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/4.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title">pajero rang</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- car-item end -->
+            <div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/5.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title">mirage range</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- car-item end -->
+            <div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/6.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title">Volkswagen</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- car-item end -->
+            <div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/7.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title">Rools royce</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- car-item end -->
+            <div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/8.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title"> Toyota</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div><!-- car-item end -->
+            <div class="col-md-6 col-12">
+              <div class="car-item">
+                <div class="thumb bg_img" data-background="assets/images/cars/9.jpg"></div>
+                <div class="car-item-body">
+                  <div class="content">
+                    <h4 class="title"> Porsche</h4>
+                    <span class="price">start form $20 per day</span>
+                    <p>Aliquam sollicitudin dolores tristiquvel ornare, vitae aenean.</p>
+                    <a href="#0" class="cmn-btn">rent car</a>
+                  </div>
+                  <div class="car-item-meta">
+                    <ul class="details-list">
+                      <li><i class="fa fa-car"></i>model 2014ib</li>
+                      <li><i class="fa fa-tachometer"></i>32000 KM</li>
+                      <li><i class="fa fa-sliders"></i>auto</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>

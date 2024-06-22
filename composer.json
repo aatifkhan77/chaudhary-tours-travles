@@ -1,0 +1,20 @@
+{
+    "name": "ctt/ctt-travels",
+    "description": "ctt",
+    "type": "project",
+    "require": {
+        "tecnickcom/tcpdf": "^6.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ctt\\CttTravels\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "aatif"
+        }
+    ],
+    "minimum-stability": "stable"
+}
